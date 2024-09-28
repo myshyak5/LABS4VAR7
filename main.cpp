@@ -1,5 +1,6 @@
 #include <iostream>
 
+
 //1 задание
 int main()
 {
@@ -8,16 +9,13 @@ int main()
     unsigned int C;
 
     std::cin >> A >> B >> C;
-    if ((A % B) == 0)
+    if (((A % B) == 0) && (B > C))
     {
-        if (B > C)
-        {
-            std::cout << int(A / B + C) << std::endl;
-        }
-        else if (B < C)
-        {
-            std::cout << int(A / B - C) << std::endl;
-        }
+        std::cout << int(A / B + C) << std::endl;
+    }
+    else if (((A % B) == 0) && (B < C))
+    {
+        std::cout << int(A / B - C) << std::endl;
     }
     else
     {
